@@ -7,7 +7,20 @@
     <body>
         <form>
             <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
-            <button id="valider" name="valider">Valider</button>
+            <button onclick="verif()" id="valider" name="valider">Valider</button>
         </form>
+        <script type="text/javascript">
+            
+            var age = document.getElementById('age'); 
+
+            function verif()
+            {
+                if (age.value > 18) 
+                    alert("vous êtes majeur !")
+                else
+                    alert("Vous êtes mineur !")
+            };
+
+        </script>
     </body>
 </html>

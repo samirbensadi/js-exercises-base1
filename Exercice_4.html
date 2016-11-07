@@ -9,7 +9,24 @@
             <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
             <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
             <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
-            <button  name="valider" id="valider">Valider</button>
+            <button onclick="ShowAlert()" name="valider" id="valider">Valider</button> <!-- ne pas oublier l'appel de fonction : ici onclick="ShowAlert()"-->
         </form>
+        <script type="text/javascript">
+            
+                var nom = document.getElementById("nom"), // on range chaque input dans une variable
+                    prenom = document.getElementById("prenom"),
+                    ville = document.getElementById("ville");
+            
+
+            function ShowAlert() // on crée la fonction showAlert qui va afficher la saisie de l'utilisateur.
+            {
+               alert(" Nom: " + nom.value + "\n " + "Prenom: " + prenom.value + "\n " + " Ville: " + ville.value);
+            };
+        
+
+
+
+
+        </script>
     </body>
 </html>

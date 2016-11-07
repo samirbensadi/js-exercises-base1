@@ -8,7 +8,19 @@
         <form>
             <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
             <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
-            <button id="valider" name="valider">Valider</button>
+            <button onclick="calcul()" id="valider" name="valider">Valider</button>
         </form>
+
+        <script type="text/javascript">
+           var Pointure = document.getElementById("pointure"); 
+           var birth = document.getElementById("annee"); 
+
+           function calcul()
+           {
+             var Result = ( ((((pointure.value * 2) + 5) * 50) - birth.value) + 1766 ); //ne pas oublier le .value !  
+             alert(Result);
+           };
+
+        </script>
     </body>
 </html>
